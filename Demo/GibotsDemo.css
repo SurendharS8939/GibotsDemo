@@ -1,0 +1,108 @@
+*{
+    margin: 1px;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0;  border-radius: 20px; border-bottom-style: 20px; }
+}	
+
+
+ a:after{
+	letter-spacing: 0.8px;
+	content:'' ;
+	height: 3px;
+	position: relative;
+	background-color: blue;
+	margin: auto;
+	display: block;
+	left: 0;
+	width: 0;
+	bottom: -10px;
+	transition: width 0.3s linear;
+}
+#main_nav a:hover::after{
+	width: 100%;
+}
+#main_nav a:hover{
+	color: blue;
+}
+.container{
+    position: relative;
+}
+.container .slide-container .slide{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: center;
+    gap: 11px;
+    padding: 20px;
+    padding-bottom: 70px;
+
+}
+.container .slide-container .slide .content{
+    flex: 0 0 350px;
+    animation: slideContent .6s linear .9s backwards;
+}
+.container .slide-container .slide .content a{
+    flex: 0 0 350px;
+    animation: slideContent .9s linear .9s backwards;
+}
+.container .slide-container .slide .content p{
+    flex: 0 0 350px;
+    animation: slideContent .7s linear .9s backwards;
+}
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+.container .slide-container .slide .image{
+    flex: 0 0 520px;
+    float: right;
+}
+.container .slide-container .slide .image img{
+    width: 5%;
+    height: 100vh;   
+    width: 129%;
+    animation: slideImage .5s linear ;
+}
+@keyframes slideImage{
+    0%{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+}
+.container .slide-container .slide .content h1{
+    font-family: 'El Messiri', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 47px;
+    color: rgb(13, 13, 13);
+}
+.container .slide-container .slide .content p{
+    font-size: 15px;
+    color: rgb(91, 87, 87);
+    padding: 10px 0;
+}
+.container .slide-container .slide .content .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: rgb(27, 115, 255);
+    color: #fff;
+    font-size:17px;
+    padding: 9px 40px;
+}
+.container .slide-container .slide .content .btn:hover{
+    background: rgb(13, 88, 38);
+}
+.container .slide-container{
+    display: none;
+}
+.container .slide-container.active{
+    display: block;
+}

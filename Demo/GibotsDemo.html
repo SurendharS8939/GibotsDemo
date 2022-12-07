@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Roboto:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/New folder/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/New folder/Demo/GibotsDemo.css">
+    <link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="/New folder/Demo/GIBots-logo.png">
+    
+    <title>Gibots</title>
+    <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand  "><img src="/New folder/Demo/GIBots-logo.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+                GIBots </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="main_nav">
+           <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <li class="nav-item active"> <a class="nav-link" href="#"><b>Home </b></a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link  " href="#" data-bs-toggle="dropdown"><b>Company ⮟</b></a>
+                     <ul class="dropdown-menu">
+                       <li><a class="dropdown-item" href="#"> About GIBots</a></li>
+                       <li><a class="dropdown-item" href="#"> Leadership Team</a></li>
+                       <li><a class="dropdown-item" href="#"> Contact us </a></li>
+                      </ul>
+                 </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link " href="#" data-bs-toggle="dropdown"> <b> Products ⮟</b> </a>
+                 <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="#">  Procure to pay & Reconciliation</a></li>
+                   <li><a class="dropdown-item" href="#">  Intelligent Legal Document Digitization</a></li>
+                   <li><a class="dropdown-item" href="#">     Design2Info Engineering Drawing Vectorization </a></li>
+                   <li><a class="dropdown-item" href="#">    Touchless Ticket Handling/Helpdesk Solution</a></li>
+                   <li><a class="dropdown-item" href="#">     Order Fall-Out Management</a></li>
+                 
+                  </ul>
+             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link  " href="#" data-bs-toggle="dropdown"> <b> Resources⮟</b></a>
+                 <ul class="dropdown-menu">
+                   <li><a class="dropdown-item" href="#"> Blog</a></li>
+                   <li><a class="dropdown-item" href="#"> Videos</a></li>
+                   <li><a class="dropdown-item" href="#"> GIBots Pulse Newsletter</a></li>
+                   <li><a class="dropdown-item" href="#"> Industry-Specific Solutions</a></li>
+                   <li><a class="dropdown-item" href="#">  Partner Ecosystem</a></li>
+                 
+                  </ul>
+             </li>
+             <li class="nav-item active text-dark" > <a class="nav-link" href="#"><b>  Careers</b></a> </li>
+           </ul>
+         </div> <!-- navbar-collapse. -->
+        </div> <!-- container-fluid.-->
+       </nav>
+</head>
+<body >
+   <div class="container">
+    <div class="slide-container active">
+        <div class="slide">
+            <div class="content">
+                <h1>From Ideas to Innovation</h1>
+                <p> A No-code Intelligent Information Management (IIM) / Content Services Platform (CSP) that helps enterprises to automate their data based decisions </p>
+                 <ab href="#" class="btn">Get Started ➤</ab>
+            </div>
+            <div class="image">
+                <img src="/New folder/Demo/slider-h1-1(1).png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content">
+                <h1>With Advanced  Digital Transformation and Automation </h1>
+                <p> Digitize your Documents Smartly & With AI/ML/NLP Technologies  </p>
+                 <ab href="#" class="btn">Get Started ➤ </ab>
+            </div>
+            <div class="image">
+                <img src="/New folder/Demo/slider-h1-2(1).png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="prev"></div>
+    <div id="next"></div>
+   </div>  
+   <script>
+    let slide = document.querySelectorAll('.slide-container');
+    let index = 0;
+    function next(){
+        slide[index].classList.remove('active');
+        index = (index +1)% slide.length;
+        slide[index].classList.add('active');
+    } 
+    setInterval(next,3000)
+   </script>   
+</body>
+</html>
+
+
